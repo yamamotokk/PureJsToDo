@@ -1,2 +1,2 @@
-# PureJsToDo
+# todo
 Created with CodeSandbox
