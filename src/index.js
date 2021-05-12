@@ -1,4 +1,5 @@
-import "./styles.css";
+// 下1行コメント化
+// import "./styles.css";
 
 const onClickAdd = () => {
   //テキストボックスの値を取得し、初期化する
@@ -83,4 +84,32 @@ const createIncompleteList = (text) => {
 
 document
   .getElementById("add-button")
-  .addEventListener("click", () => onClickAdd());
+  .addEventListener("click", () => {
+    // 入力がない場合はアラートを発信
+    if (document.getElementById("add-text").value===""){
+      alert('入力がありません');
+    }else{onClickAdd();};});
+
+    document
+  .getElementById("add-text").addEventListener('keypress', test_ivent);
+
+    function test_ivent(e) {
+      if(e.keyCode === 13 && document.getElementById("add-text").value!=="") {
+          onClickAdd();
+    // 入力がない場合はアラートを発信
+    // enterキーのキーコードは13
+      }else if(e.keyCode === 13 && document.getElementById("add-text").value===""){
+        alert('入力がありません');
+      }else{
+        return false;
+      }
+    }
+
+
+
+const show = document.getElementById("view")
+const showButton = document.getElementById("showButton")
+showButton.addEventListener("click",()=>{
+show.classList.remove("view");
+showButton.innerText = "";
+})
