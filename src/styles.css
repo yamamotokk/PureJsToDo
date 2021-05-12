@@ -1,38 +1,51 @@
-.view{
-  visibility: hidden;
+.invisible {
+  display: none;
+}
+.view {
+  display: none;
 }
 
 body {
   font-family: sans-serif;
+  font-size: 16px;
 }
 
 input {
-  border-radius: 16px;
+  border-radius: 26px;
   border: none;
   padding: 6px 16px;
   outline: none;
 }
 
 button {
-  border-radius: 16px;
-  border: none;
-  padding: 4px 16px;
+  display: inline-block;
+  max-width: 280px;
+  text-align: left;
+  background-color: #008cff;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 4px;
+  border-bottom: 4px solid rgba(0, 0, 255, 0.534);
+  margin-left: 6px;
 }
 
-button:hover {
-  background-color: #ff7fff;
-  color: #fff;
-  cursor: pointer;
+button:active {
+  transform: translateY(4px);
+  border-bottom: none;
 }
 
 li {
   margin-right: 8px;
+  list-style: none;
 }
 
 .input-area {
   background-color: #c1ffff;
   width: 400px;
-  height: 30px;
+  height: 38px;
   padding: 8px;
   margin: 8px;
   border-radius: 8px;
@@ -48,7 +61,7 @@ li {
 }
 
 .complete-area {
-  background-color: #ffffe0;
+  background-color: #c0c0c0;
   width: 400px;
   min-height: 200px;
   padding: 8px;

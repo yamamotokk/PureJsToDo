@@ -82,34 +82,37 @@ const createIncompleteList = (text) => {
   document.getElementById("incomplete-list").appendChild(div);
 };
 
-document
-  .getElementById("add-button")
-  .addEventListener("click", () => {
-    // 入力がない場合はアラートを発信
-    if (document.getElementById("add-text").value===""){
-      alert('入力がありません');
-    }else{onClickAdd();};});
+document.getElementById("add-button").addEventListener("click", () => {
+  // 入力がない場合はアラートを発信
+  if (document.getElementById("add-text").value === "") {
+    alert("入力がありません");
+  } else {
+    onClickAdd();
+  }
+});
 
-    document
-  .getElementById("add-text").addEventListener('keypress', test_event);
+document.getElementById("add-text").addEventListener("keypress", test_event);
 
-    function test_event(e) {
-      if(e.keyCode === 13 && document.getElementById("add-text").value!=="") {
-          onClickAdd();
+function test_event(e) {
+  if (e.keyCode === 13 && document.getElementById("add-text").value !== "") {
+    onClickAdd();
     // 入力がない場合はアラートを発信
     // enterキーのキーコードは13
-      }else if(e.keyCode === 13 && document.getElementById("add-text").value===""){
-        alert('入力がありません');
-      }else{
-        return false;
-      }
-    }
+  } else if (
+    e.keyCode === 13 &&
+    document.getElementById("add-text").value === ""
+  ) {
+    alert("入力がありません");
+  } else {
+    return false;
+  }
+}
 
+const show = document.getElementById("view");
+const showButton = document.getElementById("showButton");
+const disappear = document.getElementById("disappear");
 
-
-const show = document.getElementById("view")
-const showButton = document.getElementById("showButton")
-showButton.addEventListener("click",()=>{
-show.classList.remove("view");
-showButton.innerText = "";
-})
+showButton.addEventListener("click", () => {
+  show.classList.remove("view");
+  disappear.classList.add("invisible");
+});

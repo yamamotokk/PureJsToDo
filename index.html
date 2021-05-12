@@ -4,22 +4,40 @@
     <title>TODO(JS)</title>
     <meta charset="UTF-8" />
     <!-- 下1行追加 -->
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
 
   <body>
-    <button class="show" id="showButton" >見る</button>
+    <section id="disappear" class="wrapper">
+      <div class="container">
+        <div class="content">
+          <div class="content-item">
+            <img src="/src/img/sample-1.jpeg" class="image" />
+          </div>
+          <div class="content-item">
+            <div class="text">
+              <h2 class="heading">MEMO</h2>
+              <p>
+                シンプルで使いやすい。シンプルで使いやすい。シンプルで使いやすい。シンプルで使いやすい。シンプルで使いやすい。シンプルで使いやすい。シンプルで使いやすい。シンプルで使いやすい。
+              </p>
+              <button class="show" id="showButton">ToDoアプリを開く</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="view" id="view">
       <div class="input-area">
         <input id="add-text" placeholder="TODOを入力" />
         <button id="add-button">追加</button>
       </div>
-  
+
       <div class="incomplete-area">
         <p class="title">未完了のTODO</p>
         <ul id="incomplete-list"></ul>
       </div>
-  
+
       <div class="complete-area">
         <p class="title">完了したTODO</p>
         <ul id="complete-list"></ul>
