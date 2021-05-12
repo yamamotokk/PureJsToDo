@@ -91,9 +91,9 @@ document
     }else{onClickAdd();};});
 
     document
-  .getElementById("add-text").addEventListener('keypress', test_ivent);
+  .getElementById("add-text").addEventListener('keypress', test_event);
 
-    function test_ivent(e) {
+    function test_event(e) {
       if(e.keyCode === 13 && document.getElementById("add-text").value!=="") {
           onClickAdd();
     // 入力がない場合はアラートを発信
